@@ -4,8 +4,10 @@ python:
 deploy:
   provider: heroku
   api_key:
-    secure: "74dd9b5f-029a-4a6e-9d64-58db96dff224"
-  app:
+    secure: "9a9e7db3-6c94-4881-8681-adbb5fbc1138"
+  app: superlists
 script:
   - python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
   - python manage.py migrate
+
+
